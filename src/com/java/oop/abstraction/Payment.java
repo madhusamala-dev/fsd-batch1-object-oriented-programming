@@ -9,4 +9,8 @@ public interface Payment {
          System.out.println("With OTP : " + otp);
          return true;
      }
+     //method which shouldn't be overridden by subclasses (statci,default)
+    default void process(){
+         System.out.println("Processing the payment");
+    }
 }
